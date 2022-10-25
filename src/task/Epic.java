@@ -3,32 +3,57 @@ package task;
 import java.util.ArrayList;
 import java.util.Objects;
 
+/**
+ * The type Epic.
+ */
 public class Epic extends Task {
+    /**
+     * The Subtask ids.
+     */
     protected ArrayList<Integer> subtaskIds;
 
-    public Epic(int id, String name, String description, String status) {
+    /**
+     * Instantiates a new Epic.
+     *
+     * @param id          the id
+     * @param name        the name
+     * @param description the description
+     * @param status      the status
+     */
+    public Epic(int id, String name, String description, TaskStatus status) {
         super(id, name, description, status);
         subtaskIds = new ArrayList<>();
     }
 
+    /**
+     * Add subtask id.
+     *
+     * @param subtaskId the subtask id
+     */
     public void addSubtaskId(int subtaskId) {
         subtaskIds.add(subtaskId);
     }
 
+    /**
+     * Gets subtask ids.
+     *
+     * @return the subtask ids
+     */
     public ArrayList<Integer> getSubtaskIds() {
         return subtaskIds;
     }
 
+    /**
+     * Delete subtask ids.
+     */
     public void deleteSubtaskIds() {
         subtaskIds.clear();
     }
 
     /**
+     * Delete subtask id by id.
      *
-     * @param subtaskId принимает аргумент id subtask, которого удали, для того чтобы удалить этот id
-     *  из "ArrayList<Integer> subtaskIds".
-     *  Пришлось упоковать в класс-обертку, в противнои слечае вылетает ошибка, так как id воспринмается не как
-     *  значение, а как индекс
+     * @param subtaskId принимает аргумент id subtask, которого удали, для того чтобы удалить этот id  из "ArrayList<Integer> subtaskIds".  Пришлось упоковать в класс-обертку, в противнои слечае вылетает ошибка, так как id воспринмается не как  значение, а как индекс
      */
     public void deleteSubtaskIdById(Integer subtaskId) {
         subtaskIds.remove(subtaskId);

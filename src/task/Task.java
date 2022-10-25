@@ -2,61 +2,137 @@ package task;
 
 import java.util.Objects;
 
+/**
+ * The type Task.
+ */
 public class Task {
 
+    /**
+     * The Id.
+     */
     protected int id;
+    /**
+     * The Name.
+     */
     protected String name;
+    /**
+     * The Description.
+     */
     protected String description;
-    protected String status;
+    /**
+     * The Status.
+     */
+    protected TaskStatus status;
 
-    public Task(int id, String name, String description, String status) {
+    /**
+     * Instantiates a new Task.
+     *
+     * @param id          the id
+     * @param name        the name
+     * @param description the description
+     * @param status      the status
+     */
+    public Task(int id, String name, String description, TaskStatus status) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.status = status;
     }
 
-    public Task(String name, String description, String status) {
+    /**
+     * Instantiates a new Task.
+     *
+     * @param name        the name
+     * @param description the description
+     * @param status      the status
+     */
+    public Task(String name, String description, TaskStatus status) {
         this.name = name;
         this.description = description;
         this.status = status;
     }
 
+    /**
+     * Instantiates a new Task.
+     *
+     * @param name        the name
+     * @param description the description
+     */
     public Task(String name, String description) {
         this.name = name;
         this.description = description;
-        this.status = "NEW"; // по умолчению будет саздаватся со статусом NEW
+        this.status = TaskStatus.NEW; // по умолчению будет саздаватся со статусом NEW
     }
 
+    /**
+     * Gets id.
+     *
+     * @return the id
+     */
     public int getId() {
         return id;
     }
 
+    /**
+     * Sets id.
+     *
+     * @param id the id
+     */
     public void setId(int id) {
         this.id = id;
     }
 
+    /**
+     * Gets name.
+     *
+     * @return the name
+     */
     public String getName() {
         return name;
     }
 
+    /**
+     * Sets name.
+     *
+     * @param name the name
+     */
     public void setName(String name) {
         this.name = name;
     }
 
+    /**
+     * Gets description.
+     *
+     * @return the description
+     */
     public String getDescription() {
         return description;
     }
 
+    /**
+     * Sets description.
+     *
+     * @param description the description
+     */
     public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getStatus() {
+    /**
+     * Gets status.
+     *
+     * @return the status
+     */
+    public TaskStatus getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    /**
+     * Sets status.
+     *
+     * @param status the status
+     */
+    public void setStatus(TaskStatus status) {
         this.status = status;
     }
 
